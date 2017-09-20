@@ -4,7 +4,7 @@ export const findComponent = (componentTree, params) => {
   } else if (componentTree.children instanceof Array) {
     let result = null;
     for (let i = 0; result === null && i < componentTree.children.length; i++) {
-      result = findChild(componentTree.children[i], params);
+      result = findComponent(componentTree.children[i], params);
     }
     return result;
   }
