@@ -4,7 +4,7 @@ import { StyleSheet, FlatList, View, Text } from "react-native";
 import { improveTeamName } from "./utils";
 
 const Standing = props => (
-  <View>
+  <View style={styles.standingView}>
     <View style={styles.row}>
       <Text style={styles.positionHeaderCell} />
       <Text style={styles.teamNameHeaderCell}>Classificação</Text>
@@ -42,6 +42,7 @@ const cellStyle = {
 };
 
 const styles = StyleSheet.create({
+  standingView: { flex: 1 },
   row: {
     flexDirection: "row",
     borderBottomColor: "#eeeeee",
